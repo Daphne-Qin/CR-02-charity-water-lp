@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity Water Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Navigation Bar: This is the top menu of the page -->
+    <nav class="nav-bar">
+        <!-- logo -->
+        <a href="#">
+            <img src="./img/cw_logo-2.png" alt="charity: water Logo">
+        </a>
+        <!-- navbar or navmenu -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Volunteer</a>
+            <a href="#">About Us</a>
+            <a href="#">News</a>
+            <a href="#"><button class="button">Give</button></a>
+        </div>
+        <details class="nav-dropdown">
+            <summary class="button">Menu</summary>
+            <div class="dropdown-links">
+                <a href="#">Home</a>
+                <a href="#">Volunteer</a>
+                <a href="#">About Us</a>
+                <a href="#">News</a>
+                <a href="#">Give</a>
+            </div>
+        </details>
+    </nav>
     <!-- Hero Section: This is the main banner at the top of the page -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
+        <div class="hero-content">
+            <!-- Main headline -->
+            <h1>We don't just build wells.<br>We build communities.</h1>
+            <!-- Subheadline -->
+            <p>For the price of your morning coffee, you can fund wells for families in developing countries so they can focus on work, education, and their dreams.</p>
+
+            <!-- Call-to-Action Section: This encourages visitors to take action -->
+            <a href="#"><button class="button">Hydrate a family for $5 today!</button></a>
+        </div>
     </section>
 
     <!-- Story Section: This tells the story of the nonprofit -->
     <section class="story">
         <h2>Our Story</h2>
         <p>
-         
+
     </section>
 
     <!-- Real-World Impact Story Section -->
@@ -29,10 +64,12 @@
         <!-- Container for image and text -->
         <div class="impact-content">
             <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+                alt="Amina smiling with clean water" class="impact-image">
             <!-- Impact story text -->
             <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
+                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village
+                now has a clean water well. Amina can go to school and her family is healthier and happier.
             </p>
         </div>
     </section>
@@ -41,7 +78,8 @@
     <section class="call-to-action">
         <h2>Make a Difference</h2>
         <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
+        <a href="#" class="button">Donate Now</a>
     </section>
 </body>
+
 </html>

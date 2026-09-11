@@ -25,30 +25,46 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
+    font-size: 1em;
     background-color: #fff;
     font-family: 'Proxima Nova', 'Avenir', 'Figtree', 'Helvetica', sans-serif;
     margin: 0px;
     color: #1a1a1a;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
 section {
-    background: #fff;
+    background: #fffaf0;
     margin: 0px;
     padding: 24px 16px;
 }
 
 h1 {
+    font-size: 2.5em;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     margin: 10px;
 }
 
 h2 {
+    font-size: 2em;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     margin: 10px;
 }
 
+h3 {
+    font-size: 1.5em;
+    font-family: 'Proxima Nova', 'Avenir', 'Figtree', 'Helvetica', sans-serif;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+a {
+    color: #2e9df7;
+}
+
 button {
+    font-size: 1.2em;
     font-family: 'Proxima Nova', 'Avenir', 'Figtree', 'Helvetica', sans-serif;
     display: inline-flex;
     align-items: center;
@@ -58,8 +74,6 @@ button {
     padding: 14px 32px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1em;
-    line-height: 1.2;
     min-height: 52px;
     box-sizing: border-box;
     border: none;
@@ -75,6 +89,7 @@ button:hover {
 
 /* Dropdowns */
 details summary {
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,6 +112,10 @@ details summary::marker {
 details[open] summary {
     background-color: #2e9df7;
     color: #fff;
+}
+
+img {
+    border-radius: 5px;
 }
 
 /* Navigation Bar Styles */
@@ -175,7 +194,7 @@ details[open] summary {
     background-image: url('./img/Ambote-CharityWater-08586.jpg');
     background-size: cover;
     /* Make the image cover the whole area */
-    background-position: center center;
+    background-position: 50% 50%;
     /* Keep the full image centered on smaller screens */
     background-repeat: no-repeat;
     color: #fff;
@@ -207,36 +226,31 @@ details[open] summary {
     font-size: 1.2em;
     margin-top: 0px;
     margin-bottom: 20px;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
 
 /* Story Section Styles */
-.story {
-    background-color: #8bd1cb;
-    /* Secondary Light Blue */
-    color: #222;
+.impact-story {
+    background-image: linear-gradient(180deg, #fffaf0, #fff, #fff);
+    padding: 25px 25px;
+}
+
+.impact-story h2 {
     text-align: center;
-    padding: 30px 20px;
-    margin: 0px;
 }
 
 /* Call-to-Action Section Styles */
 .call-to-action {
-    background-color: #fff;
-    border-style: solid;
-    border-width: 25px;
-    border-color: #8bd1cb;
+    background-color: #8bd1cb;
     color: #1a1a1a;
     text-align: center;
-    padding: 30px 20px;
+    padding: 1.5em 1.5em;
     margin: 0px;
 }
 
-/* Style the impact story image */
-.impact-image {
-    width: 100%;
-    max-width: 320px;
-    box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+.call-to-action div {
+    background-color: #fff;
+    padding: 1em 1em;
+    border-radius: 5px;
 }
 
 /* 
@@ -256,7 +270,7 @@ details[open] summary {
 
     /* Make headline font size smaller so it fits on small screens */
     .hero h1 {
-        font-size: 1.4em;
+        font-size: 2em;
     }
 
     /* Make subheadline font size smaller */
@@ -270,24 +284,10 @@ details[open] summary {
     .donation-section {
         padding: 14px 8px;
     }
-
-    /* Make impact story image smaller and stack above the text */
-    .impact-content {
-        display: block;
-        /* Stack items vertically */
-        text-align: center;
-    }
-
-    .impact-image {
-        width: 90%;
-        /* Make image take up most of the width */
-        max-width: 220px;
-    }
 }
 
 /* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
 @media (min-width: 601px) {
-
     /* Crop left side of the hero image  */
     .hero {
         background-position: right center;
@@ -298,42 +298,79 @@ details[open] summary {
         width: 50%;
         margin-left: auto;
     }
-
-    /* Show image and text side by side in the impact story */
-    .impact-content {
-        display: flex;
-        /* Place items in a row */
-        align-items: right center;
-        /* Vertically center items */
-        justify-content: center;
-        /* Center the whole group */
-        gap: 28px;
-        /* Space between image and text */
-        text-align: left;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .impact-image {
-        width: 300px;
-    }
-
 }
 
 /* Make navbar links appear only on larger screens */
 @media (max-width: 900px) {
+    /* Show dropdown navigation */
     .nav-bar > .nav-links {
         display: none;
     }
     .nav-dropdown {
         display: block;
     }
+
+    /* Make impact story image smaller and stack above the text */
+    .impact-story {
+        text-align: center;
+        justify-content: center;
+    }
+    .impact-info {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .impact-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .impact-content {
+        display: block;
+        text-align: center;
+    }
 }
 @media (min-width: 901px) {
+    /* Show full nav bar */
     .nav-bar > .nav-links {
         display: flex;
     }
     .nav-dropdown {
         display: none;
+    }
+
+    /* Show image and text side by side in the impact story */
+    .impact-story {
+        display: flex;
+        flex-wrap: wrap;
+        container-type: inline-size;
+        justify-content: flex-start;
+        margin: 0px;
+    }
+    .impact-story div {
+        margin: 0em 2em;
+    }
+    .impact-story h2 {
+        flex-basis: 100%;
+    }
+    .impact-info {
+        flex: 0 0 calc(50% - 4em);
+        max-width: calc(50% - 4em);
+        box-sizing: border-box;
+    }
+    .impact-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0em 0em 2em 0em;
+    }
+    .impact-content {
+        font-size: clamp(1em, 1.5cqw, 1.2em);
+        display: block;
+        flex: 1;
+        min-width: 0px;
+        align-self: center;
+        text-align: left;
     }
 }
